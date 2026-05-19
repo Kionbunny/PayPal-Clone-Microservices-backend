@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="transaction-service" />
+        <module name="user_service" />
+        <module name="user-service" />
+        <module name="notification-service" />
+        <module name="reward-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="notification-service (1)" target="17" />
+      <module name="paypal_clone" target="1.5" />
+      <module name="transaction_service" target="21" />
+      <module name="user-service (1)" target="17" />
+      <module name="user_service" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
+      <module name="notification-service (1)" options="-parameters" />
+      <module name="reward-service" options="-parameters" />
+      <module name="transaction-service" options="-parameters" />
+      <module name="transaction_service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="user-service (1)" options="-parameters" />
+      <module name="user_service" options="-parameters" />
+    </option>
+  </component>
+</project>

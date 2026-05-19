@@ -1,0 +1,26 @@
+server:
+  port: 8080  # User Service usually runs on 8080
+
+spring:
+  # H2 for User Service
+  datasource:
+    url: jdbc:h2:mem:userdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+  # Kafka CONSUMER Configuration
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: user-service-group
+      # How to read the Key (String)
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # How to read the Value (JSON -> Transaction Object)
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        # Crucial: This tells Spring it's safe to convert JSON into your Transaction class
+        spring.json.trusted.packages: "*"
